@@ -10,11 +10,10 @@ const Queue = require('../models/Queue');
  */
 const seedDatabase = async () => {
   try {
-    const userCount = await User.countDocuments();
-    if (userCount > 0) {
-      console.log('📦 Database already has data. Skipping seed.');
-      return;
-    }
+    console.log('🗑️ Clearing existing database for re-seed...');
+    await User.deleteMany({});
+    await Service.deleteMany({});
+    await Queue.deleteMany({});
 
     console.log('🌱 Seeding database...');
 

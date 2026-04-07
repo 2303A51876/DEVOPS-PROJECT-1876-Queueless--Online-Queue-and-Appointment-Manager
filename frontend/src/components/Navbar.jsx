@@ -53,11 +53,11 @@ const Navbar = () => {
             {isAuthenticated ? (
               <>
                 {isAdmin ? (
-                  <Link to="/admin-dashboard" className={navLinkClass('/admin-dashboard')} id="nav-admin">
+                  <Link to="/admin" className={navLinkClass('/admin')} id="nav-admin">
                     Admin Dashboard
                   </Link>
                 ) : (
-                  <Link to="/user-dashboard" className={navLinkClass('/user-dashboard')} id="nav-dashboard">
+                  <Link to="/dashboard" className={navLinkClass('/dashboard')} id="nav-dashboard">
                     User Dashboard
                   </Link>
                 )}
@@ -136,8 +136,8 @@ const Navbar = () => {
             {isAuthenticated ? (
               <>
                 <Link
-                  to={isAdmin ? '/admin-dashboard' : '/user-dashboard'}
-                  className={`block ${navLinkClass(isAdmin ? '/admin-dashboard' : '/user-dashboard')}`}
+                  to={isAdmin ? '/admin' : '/dashboard'}
+                  className={`block ${navLinkClass(isAdmin ? '/admin' : '/dashboard')}`}
                   onClick={() => setMobileOpen(false)}
                 >
                   {isAdmin ? 'Admin Dashboard' : 'User Dashboard'}

@@ -14,8 +14,8 @@ import AdminDashboard from './pages/AdminDashboard';
  * Routes:
  *   /login → Login page
  *   /register → Register page
- *   /user-dashboard → User Dashboard (protected, user role)
- *   /admin-dashboard → Admin Dashboard (protected, admin role)
+ *   /dashboard → User Dashboard (protected, user role)
+ *   /admin → Admin Dashboard (protected, admin role)
  */
 const App = () => {
   const { loading, isAuthenticated, isAdmin } = useAuth();
@@ -41,7 +41,7 @@ const App = () => {
             path="/login"
             element={
               isAuthenticated ? (
-                <Navigate to={isAdmin ? '/admin-dashboard' : '/user-dashboard'} replace />
+                <Navigate to={isAdmin ? '/admin' : '/dashboard'} replace />
               ) : (
                 <Login />
               )
@@ -51,14 +51,14 @@ const App = () => {
             path="/register"
             element={
               isAuthenticated ? (
-                <Navigate to={isAdmin ? '/admin-dashboard' : '/user-dashboard'} replace />
+                <Navigate to={isAdmin ? '/admin' : '/dashboard'} replace />
               ) : (
                 <Register />
               )
             }
           />
           <Route
-            path="/user-dashboard"
+            path="/dashboard"
             element={
               <ProtectedRoute>
                 <UserDashboard />
@@ -66,16 +66,13 @@ const App = () => {
             }
           />
           <Route
-            path="/admin-dashboard"
+            path="/admin"
             element={
               <ProtectedRoute adminOnly>
                 <AdminDashboard />
               </ProtectedRoute>
             }
           />
-          {/* Legacy route redirects */}
-          <Route path="/dashboard" element={<Navigate to="/user-dashboard" replace />} />
-          <Route path="/admin" element={<Navigate to="/admin-dashboard" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

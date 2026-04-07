@@ -41,7 +41,7 @@ const Register = () => {
         role: 'user', // Always user — admin cannot register via UI
       });
       toast.success(`Welcome, ${user.name}! Account created.`);
-      navigate('/user-dashboard');
+      navigate('/dashboard');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Registration failed.');
     } finally {

@@ -40,7 +40,28 @@ A production-ready, full-stack smart queue management system with real-time upda
 - ✅ bcrypt password hashing
 - ✅ Role-based access control (user/admin)
 - ✅ Protected admin routes
-- ✅ No credentials exposed in UI
+- ✅ No credentials exposed in UI (except for explicitly requested demo list)
+
+---
+
+## 🔑 Demo Credentials
+
+To test the application locally or on the deployed links, use the following preset credentials. **Password for all accounts is `password123`**.
+
+### Admin
+- `thulasishylasri@gmail.com`
+
+### Users
+- `vasudevkazipeta@gmail.com`
+- `pranavthirunahari@gmail.com`
+- `srinivasthirunahari@gmail.com`
+- `aksharthirunahari@gmail.com`
+- `varshilkazipeta@gmail.com`
+- `vihaankazipeta@gmail.com`
+- `bhanuthirunahari@gmail.com`
+- `shrestathirunahari@gmail.com`
+- `sheshuthirunahari@gmail.com`
+- `prasannathirunahari@gmail.com`
 
 ---
 

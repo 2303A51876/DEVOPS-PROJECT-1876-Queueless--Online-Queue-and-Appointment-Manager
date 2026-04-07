@@ -24,7 +24,7 @@ const Login = () => {
     try {
       const user = await login(formData);
       toast.success(`Welcome back, ${user.name}!`);
-      navigate(user.role === 'admin' ? '/admin-dashboard' : '/user-dashboard');
+      navigate(user.role === 'admin' ? '/admin' : '/dashboard');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Invalid credentials. Please try again.');
     } finally {
@@ -129,6 +129,36 @@ const Login = () => {
         <p className="text-center text-dark-600 text-xs mt-6">
           Secured with JWT authentication & bcrypt encryption
         </p>
+
+        {/* Demo Credentials Box */}
+        <div className="mt-8 glass-card p-6 border border-primary-500/30 bg-primary-900/10 backdrop-blur-md">
+          <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            Demo Credentials (Testing Only)
+          </h3>
+          <div className="text-xs text-dark-300 space-y-2">
+            <div>
+              <span className="text-primary-400 font-medium">Admin:</span> <span className="text-dark-200">thulasishylasri@gmail.com</span> <br/>
+              <span className="text-dark-500">Password:</span> password123
+            </div>
+            
+            <div className="pt-3 border-t border-dark-800/50 mt-3">
+              <p className="text-dark-400 mb-2">Users (password is <span className="text-dark-200">password123</span>):</p>
+              <ul className="grid grid-cols-1 gap-y-1.5 text-[11px] text-dark-300 max-h-32 overflow-y-auto pr-2 custom-scrollbar">
+                <li>vasudevkazipeta@gmail.com</li>
+                <li>pranavthirunahari@gmail.com</li>
+                <li>srinivasthirunahari@gmail.com</li>
+                <li>aksharthirunahari@gmail.com</li>
+                <li>varshilkazipeta@gmail.com</li>
+                <li>vihaankazipeta@gmail.com</li>
+                <li>bhanuthirunahari@gmail.com</li>
+                <li>shrestathirunahari@gmail.com</li>
+                <li>sheshuthirunahari@gmail.com</li>
+                <li>prasannathirunahari@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
