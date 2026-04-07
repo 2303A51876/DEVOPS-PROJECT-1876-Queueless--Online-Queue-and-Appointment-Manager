@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: queueless-backend
+    env: node
+    buildCommand: "cd backend && npm install"
+    startCommand: "cd backend && npm start"
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: PORT
+        value: "10000"
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_URL
+        value: https://thulasishylasri-queueless.vercel.app
