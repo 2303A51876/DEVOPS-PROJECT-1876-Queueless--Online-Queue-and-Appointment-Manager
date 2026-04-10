@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 QueueLess — Online Queue & Appointment Manager
 
 A production-ready, full-stack smart queue management system with real-time updates. Join queues online, track your position live, and get notified when it's your turn.
@@ -229,3 +230,6 @@ MIT License — Open source and free to use.
 ---
 
 Built with ❤️ by **Thulasi Shylasri**
+=======
+# DEVOPS-PROJECT-1876-Queueless--online-Queue-and-Appointment-Manager
+>>>>>>> 17745e88ae31cb8e460995e8e111fe6a836978fb
